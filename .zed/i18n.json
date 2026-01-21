@@ -1,0 +1,6 @@
+{
+    "localePaths": ["messages"],
+    "keyStyle": "nested",
+    "sourceLocale": "en",
+    "functionPatterns": ["m\\s*\\[\\s*[\"']([^\"']+)[\"']\\s*\\]\\s*\\("]
+}

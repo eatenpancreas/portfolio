@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.shadow-glass {
+    /* Layered shadows for depth */
+    box-shadow:
+        0 32px 64px rgba(0, 0, 0, 0.3),
+        /* Drop shadow */ 0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+        /* Inner edge */ 0 1px 0 rgba(255, 255, 255, 0.15) inset; /* Top highlight */
+}
+
+::-webkit-scrollbar-track {
+    background: #7a5b6b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #fff #7a5b6b;
+}

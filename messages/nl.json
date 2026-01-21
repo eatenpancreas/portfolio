@@ -1,0 +1,13 @@
+{
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "language": "Nederlands",
+    "note": {
+        "pt0": "Opmerking:",
+        "pt1": "Deze lijst wordt automatisch geupdate",
+        "pt2": "dankzij"
+    },
+    "details": {
+        "minutes_listened": "Minuten geluisterd",
+        "streams": "Streams"
+    }
+}

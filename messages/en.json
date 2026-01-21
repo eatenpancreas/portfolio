@@ -1,0 +1,13 @@
+{
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "language": "English",
+    "note": {
+        "pt0": "Note:",
+        "pt1": "This list is updated automatically",
+        "pt2": "thanks to "
+    },
+    "details": {
+        "minutes_listened": "Minutes listened",
+        "streams": "Streams"
+    }
+}
