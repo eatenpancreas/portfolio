@@ -22,7 +22,7 @@
 </script>
 
 <GlassDiv>
-    <H1>top tracks</H1>
+    <H1>Top tracks</H1>
 </GlassDiv>
 
 <Note>
@@ -33,7 +33,7 @@
     </p>
 </Note>
 
-<stats.List list={statList}>
+<stats.List list={statList} searchKeys={["track.name", "track.artists.name"]}>
     {#snippet item(item)}
         {#if item.track.albums.length && item.track.albums[0].image}
             <stats.Image

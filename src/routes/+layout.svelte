@@ -2,12 +2,12 @@
 	import { page } from '$app/state';
 	import { locales } from '$lib/paraglide/runtime';
 	import './layout.css';
-	import { Header } from '$lib/components/unique/header';
+	import header from '$lib/components/unique/header';
 	import GlobalErrorDisplay from '$lib/components/unique/GlobalErrorDisplay.svelte';
-    import { localizeLink } from '$lib/utils';
+    import { localizeLink, min_w_lg } from '$lib/utils';
     import { Menu, Settings } from '@lucide/svelte';
     import { m } from '$lib/paraglide/messages';
-    import { goto } from '$app/navigation';
+    import { localeStore } from '$lib/store/layout';
 
 	let { children } = $props();
 </script>
@@ -18,24 +18,49 @@
     <link rel="icon" href="/dachard-simple.svg" />
 </svelte:head>
 
-{#snippet logo()}
-    <button class="h-full" onclick={() => goto(localizeLink('/'))}>
-        <img class="h-full" src="/dachard.svg" alt="Logo" />
-    </button>
-{/snippet}
+<header.Root>
+    <header.HomeImage src="/dachard.svg"/>
+    <header.Collapsing>
+        {#snippet collapsed()}
+            <Menu/>
+        {/snippet}
 
-<Header
-	left={[logo]}
-	center={[
-		{ href: localizeLink('/'), text: "home" },
-		{ href: localizeLink("/top/tracks"), text: "top tracks" },
-		{ href: localizeLink("/top/albums"), text: "top albums" },
-		{ href: localizeLink("/top/artists"), text: "top artists" },
-	]}
-	centerCollapseIcon={Menu}
-	right={locales.map(locale => ({ href: localizeLink(page.url.pathname, locale), text: m["language"]({}, { locale })}))}
-	rightCollapseIcon={Settings}
-/>
+        <header.Group>
+            <header.Item>
+                <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/')}>
+                    Home
+                </header.Link>
+            </header.Item>
+        </header.Group>
+        <header.Group heading={m["header.music_taste"]()}>
+            <header.LinkItems items={[
+          		{ href: localizeLink("/top/tracks"), text: "Tracks" },
+          		{ href: localizeLink("/top/albums"), text: "Albums" },
+          		{ href: localizeLink("/top/artists"), text: "Artists" },
+            ]}/>
+        </header.Group>
+    </header.Collapsing>
+
+    <header.Collapsing class="justify-end pr-5">
+        {#snippet collapsed()}
+            <Settings/>
+        {/snippet}
+
+        <header.Group heading={m["header.switch_language"]()}>
+            {#each locales as locale}
+                <header.Item>
+                    <header.Link
+                        onclick={() => localeStore.set(locale)}
+                        href={localizeLink(page.url.pathname, locale)}
+                    >
+                        {m["language"]({}, { locale })}
+                    </header.Link>
+                </header.Item>
+            {/each}
+        </header.Group>
+    </header.Collapsing>
+</header.Root>
+
 <GlobalErrorDisplay />
 
 <div

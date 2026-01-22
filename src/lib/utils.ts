@@ -4,11 +4,12 @@ import type { LocalizedPathname } from "./components/unique/header";
 import { m } from "./paraglide/messages";
 import { localizeHref, type Locale } from "./paraglide/runtime";
 import { localeStore } from "./store/layout";
+import { MediaQuery } from "svelte/reactivity";
 
 export const delay = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
 
-const data = m["note.pt0"]();
+// const data = m["note.pt0"]();
 
 export function limitText(text: string, maxLength: number): string {
     if (text.length <= maxLength) return text;
@@ -23,3 +24,5 @@ export function localizeLink(
         locale: locale ?? get(localeStore),
     }) as LocalizedPathname;
 }
+
+export const min_w_lg = new MediaQuery("min-width: 1024px");

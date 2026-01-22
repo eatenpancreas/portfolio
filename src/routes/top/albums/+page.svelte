@@ -10,6 +10,7 @@
     import stats from "$lib/components/unique/stats";
     import { m } from '$lib/paraglide/messages.js';
     import { limitText } from "$lib/utils";
+    import filterGenres from "../filterGenres";
 
     let statList: AlbumItem[] = $state([]);
 
@@ -23,7 +24,7 @@
 </script>
 
 <GlassDiv>
-    <H1>top albums</H1>
+    <H1>Top albums</H1>
 </GlassDiv>
 
 <Note>
@@ -34,7 +35,7 @@
     </p>
 </Note>
 
-<stats.List list={statList}>
+<stats.List list={statList} searchKeys={["album.name", "album.artists.name"]}>
     {#snippet item(item)}
         {#if item.album.image}
             <stats.Image
@@ -47,7 +48,7 @@
             subtitle={
                 item.album.artists.map((a) => a.name).join(", ") +
                 (item.album.genres.length ?
-                    (' - ' + limitText(item.album.genres.join(", "), 30))
+                    (' - ' + limitText(filterGenres(item.album.genres), 30))
                     : ""
                 )
             }

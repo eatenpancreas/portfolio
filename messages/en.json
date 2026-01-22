@@ -9,5 +9,9 @@
     "details": {
         "minutes_listened": "Minutes listened",
         "streams": "Streams"
+    },
+    "header": {
+        "music_taste": "Music taste",
+        "switch_language": "Switch language"
     }
 }

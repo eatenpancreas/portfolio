@@ -9,6 +9,7 @@
     import Link from "$lib/components/basic/Link.svelte";
     import stats from "$lib/components/unique/stats";
     import { m } from '$lib/paraglide/messages.js';
+    import filterGenres from "../filterGenres";
 
     let statList: ArtistItem[] = $state([]);
 
@@ -22,7 +23,7 @@
 </script>
 
 <GlassDiv>
-    <H1>top artists</H1>
+    <H1>Top artists</H1>
 </GlassDiv>
 
 <Note>
@@ -33,7 +34,7 @@
     </p>
 </Note>
 
-<stats.List list={statList}>
+<stats.List list={statList} searchKeys={["artist.name"]}>
     {#snippet item(item)}
         {#if item.artist.image}
             <stats.Image
@@ -43,7 +44,7 @@
         {/if}
         <stats.Details
             title={item.artist.name}
-            subtitle={item.artist.genres.join(", ")}
+            subtitle={filterGenres(item.artist.genres)}
             {item}
         />
     {/snippet}

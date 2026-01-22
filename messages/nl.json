@@ -9,5 +9,9 @@
     "details": {
         "minutes_listened": "Minuten geluisterd",
         "streams": "Streams"
+    },
+    "header": {
+        "music_taste": "Muzieksmaak",
+        "switch_language": "Verander Taal"
     }
 }
