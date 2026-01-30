@@ -25,7 +25,7 @@
 {#if min_w_lg.current}
     {#if heading}
         <DropdownMenu.Root bind:open={open}>
-            <DropdownMenu.Trigger class="text-rose-100 hover:text-rose-200 font-bold border-b text-center transition-colors cursor-pointer">
+            <DropdownMenu.Trigger class="text-purple-300 hover:text-purple-100 font-bold border-b text-center transition-colors cursor-pointer">
                 {heading}
             </DropdownMenu.Trigger>
             <DropdownMenu.Content
@@ -39,7 +39,7 @@
 {:else}
     <DropdownMenu.Group class="flex flex-col gap-4 min-w-40">
         {#if heading}
-            <DropdownMenu.GroupHeading class="text-xl text-center w-full text-rose-100 font-light">{heading}</DropdownMenu.GroupHeading>
+            <DropdownMenu.GroupHeading class="text-xl text-center w-full font-light">{heading}</DropdownMenu.GroupHeading>
         {/if}
         {@render children?.()}
     </DropdownMenu.Group>

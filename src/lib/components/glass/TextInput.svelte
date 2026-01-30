@@ -11,8 +11,8 @@
     type="text"
     bind:value={value}
     class={twMerge(
-        "w-full focus:outline-none transition-colors focus:bg-transparent",
         glassDivClasses,
+        "w-full focus:outline-none transition-colors focus:bg-transparent shadow-glass-hover",
         className as any,
     )}
     {...props}

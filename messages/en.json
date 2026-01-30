@@ -11,7 +11,7 @@
         "streams": "Streams"
     },
     "header": {
-        "music_taste": "Music taste",
-        "switch_language": "Switch language"
+        "music_taste": "Music",
+        "switch_language": "Languages"
     }
 }
