@@ -22,8 +22,8 @@
             transparent
         );
 
-        /* backdrop-blur-xs */
-        --tw-backdrop-blur: blur(var(--blur-xs) /* 4px */);
+        /* backdrop-blur-md */
+        --tw-backdrop-blur: blur(var(--blur-md) /* 4px */);
         -webkit-backdrop-filter: var(--tw-backdrop-blur,)
             var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,)
             var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,)

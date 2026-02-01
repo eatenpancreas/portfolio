@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
     import { DropdownMenu } from "bits-ui";
-    import { glassDivClasses } from "$lib/components/glass";
+    import { GlassDiv, glassDivClasses } from "$lib/components/glass";
     import { twMerge } from "tailwind-merge";
     import { min_w_lg } from "$lib/utils";
     import { afterNavigate } from "$app/navigation";
@@ -27,10 +27,10 @@
                 {@render collapsed()}
             </DropdownMenu.Trigger>
 
-            <DropdownMenu.Content
-                class="{glassDivClasses} bg-[#251e22]/90! px-4! flex flex-col gap-4"
-            >
-                {@render children?.()}
+            <DropdownMenu.Content class="pt-4">
+                <GlassDiv class="p-4! flex flex-col gap-4 bg-black">
+                    {@render children?.()}
+                </GlassDiv>
             </DropdownMenu.Content>
         </DropdownMenu.Root>
     </div>

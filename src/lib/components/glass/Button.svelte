@@ -8,7 +8,7 @@
 
 <button
     class={twMerge(
-        "py-6 px-8 text-white/80 backdrop-blur-xs backdrop-saturate-200 bg-white/8 hover:bg-white/20 border border-white/12 shadow-glass shadow-glass-hover rounded-3xl transition-all relative hover:-top-1 hover:backdrop-brightness-120",
+        "py-6 px-8 text-white/80 backdrop-blur-md backdrop-saturate-200 bg-white/8 hover:bg-white/20 border border-white/12 shadow-glass shadow-glass-hover rounded-3xl transition-all relative hover:-top-1 hover:backdrop-brightness-120",
         className as any,
     )}
     {...props}

@@ -11,7 +11,13 @@
         "streams": "Streams"
     },
     "header": {
-        "music_taste": "Music",
         "switch_language": "Languages"
+    },
+    "page": {
+        "about_me": "About Me",
+        "music_taste": "Music",
+        "music_taste_tracks": "Top Tracks",
+        "music_taste_albums": "Top Albums",
+        "music_taste_artists": "Top Artists"
     }
 }

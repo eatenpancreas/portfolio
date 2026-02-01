@@ -11,7 +11,13 @@
         "streams": "Streams"
     },
     "header": {
-        "music_taste": "Muziek",
         "switch_language": "Talen"
+    },
+    "page": {
+        "about_me": "Over Mij",
+        "music_taste": "Muziek",
+        "music_taste_tracks": "Top Nummers",
+        "music_taste_albums": "Top Albums",
+        "music_taste_artists": "Top Artiesten"
     }
 }

@@ -21,9 +21,7 @@
 
 </script>
 
-<GlassDiv>
-    <H1>Top tracks</H1>
-</GlassDiv>
+<H1 title={m["page.music_taste_tracks"]()}/>
 
 <Note>
     <span class="font-bold">{m["note.pt0"]()}</span> {m["note.pt1"]()}

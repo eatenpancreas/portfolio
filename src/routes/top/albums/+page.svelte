@@ -3,7 +3,7 @@
     import { GlassDiv } from "$lib/components/glass";
     import { onMount } from "svelte";
     import statsapi from "$lib/client/stats";
-    import { errorStore } from "$lib/store/layout";
+    import { errorStore, pageStore } from "$lib/store/layout";
     import type { AlbumItem } from "$lib/client/stats/models";
     import Note from "$lib/components/unique/Note.svelte";
     import Link from "$lib/components/basic/Link.svelte";
@@ -20,12 +20,9 @@
         console.log(userTracks);
         statList = [...userTracks.data.items];
     });
-
 </script>
 
-<GlassDiv>
-    <H1>Top albums</H1>
-</GlassDiv>
+<H1 title={m["page.music_taste_albums"]()}/>
 
 <Note>
     <span class="font-bold">{m["note.pt0"]()}</span> {m["note.pt1"]()}

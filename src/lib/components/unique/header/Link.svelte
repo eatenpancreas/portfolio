@@ -15,7 +15,7 @@
     } = $props();
 
     let variants = {
-        button: "border-b-0 bg-black p-2 px-8 rounded-xl",
+        button: "border-b-0 bg-black hover:bg-gray-900 transition-colors p-2 px-8 rounded-xl",
         link: ""
     };
 </script>

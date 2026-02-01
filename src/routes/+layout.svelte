@@ -7,19 +7,21 @@
     import { localizeLink, min_w_lg } from '$lib/utils';
     import { Menu, Settings } from '@lucide/svelte';
     import { m } from '$lib/paraglide/messages';
-    import { localeStore } from '$lib/store/layout';
+    import { localeStore, pageStore } from '$lib/store/layout';
 
 	let { children } = $props();
 </script>
 
 
 <svelte:head>
-    <title>Pascal d'Achard van Enschut</title>
+    <title>Pascal d'AvE{$pageStore? " - " + $pageStore : ""}</title>
     <link rel="icon" href="/dachard-simple.svg" />
 </svelte:head>
 
 <header.Root>
-    <header.HomeImage src="/dachard.svg"/>
+    <div>
+        <header.HomeImage src="/dachard.svg"/>
+    </div>
     <header.Collapsing>
         {#snippet collapsed()}
             <Menu/>
@@ -28,15 +30,15 @@
         <header.Group>
             <header.Item>
                 <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/')}>
-                    Home
+                    {m["page.about_me"]()}
                 </header.Link>
             </header.Item>
         </header.Group>
-        <header.Group heading={m["header.music_taste"]()}>
+        <header.Group heading={m["page.music_taste"]()}>
             <header.LinkItems items={[
-          		{ href: localizeLink("/top/tracks"), text: "Tracks" },
-          		{ href: localizeLink("/top/albums"), text: "Albums" },
-          		{ href: localizeLink("/top/artists"), text: "Artists" },
+          		{ href: localizeLink("/top/tracks"), text: m["page.music_taste_tracks"]() },
+          		{ href: localizeLink("/top/albums"), text: m["page.music_taste_albums"]() },
+          		{ href: localizeLink("/top/artists"), text: m["page.music_taste_artists"]() },
             ]}/>
         </header.Group>
     </header.Collapsing>

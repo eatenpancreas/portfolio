@@ -2,7 +2,7 @@
     import type { Snippet } from "svelte";
     import { DropdownMenu } from "bits-ui";
     import { min_w_lg } from "$lib/utils";
-    import { glassDivClasses } from "$lib/components/glass";
+    import { GlassDiv, glassDivClasses } from "$lib/components/glass";
     import { afterNavigate } from "$app/navigation";
 
     let {
@@ -28,9 +28,10 @@
             <DropdownMenu.Trigger class="text-purple-300 hover:text-purple-100 font-bold border-b text-center transition-colors cursor-pointer">
                 {heading}
             </DropdownMenu.Trigger>
-            <DropdownMenu.Content
-                class="{glassDivClasses} bg-[#251e22]/90! px-4! flex flex-col gap-4">
-                {@render children?.()}
+            <DropdownMenu.Content class="pt-4">
+                <GlassDiv class="p-4! flex flex-col gap-4 bg-black">
+                    {@render children?.()}
+                </GlassDiv>
             </DropdownMenu.Content>
         </DropdownMenu.Root>
     {:else}
@@ -39,7 +40,7 @@
 {:else}
     <DropdownMenu.Group class="flex flex-col gap-4 min-w-40">
         {#if heading}
-            <DropdownMenu.GroupHeading class="text-xl text-center w-full font-light">{heading}</DropdownMenu.GroupHeading>
+            <DropdownMenu.GroupHeading class="text-xl text-center w-full font-light border-b">{heading}</DropdownMenu.GroupHeading>
         {/if}
         {@render children?.()}
     </DropdownMenu.Group>

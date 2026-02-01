@@ -5,17 +5,33 @@
     import { GlassDiv } from "$lib/components/glass";
 
     const actions: TypewriterAction[] = [
-        { set: "Pascal d ..." },
-        { delete: 4 },
-        { waitMs: 40 },
-        { add: "acha" },
+        { add: "Pascal" },
+        { waitMs: 200 },
+        { add: " ..." },
+        { waitMs: 500 },
         { delete: 3 },
-        { add: "'" },
+        { waitMs: 1000 },
+        { add: "achart va" },
+        { delete: 4 },
+        { add: "d van Enschut" },
+        { moveCursor: -14 },
+        { waitMs: 300 },
+        { moveCursor: -3 },
+        { waitMs: 500 },
+        { delete: 1 },
+        { waitMs: 200 },
+        { add: "d" },
+        { waitMs: 200 },
+        { add: "'A" },
+        { stopTyping: true },
     ];
 </script>
 
-<img class="rounded-full max-w-80 mx-auto" src="/me.jpg" alt="Me" />
+<img
+    class="rounded-full w-40 md:w-45 lg:w-50 max-md:mt-4 mx-auto mb-8"
+    src="/me.jpg"
+    alt="Me"
+/>
 
-<GlassDiv>
-    <H1><Typewriter {actions} /></H1>
-</GlassDiv>
+<H1 setTitle={null}><Typewriter {actions} /></H1>
+<GlassDiv></GlassDiv>
