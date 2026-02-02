@@ -13,7 +13,7 @@
 </script>
 
 <div class="flex items-center text-2xl md:text-4xl lg:text-5xl py-4 gap-4">
-    <hr class="border grow" />
+    <hr class="border grow min-w-1" />
     <h1 class="md:mb-4">
         {#if "title" in props}
             {props.title}
@@ -21,5 +21,5 @@
             {@render props.children?.()}
         {/if}
     </h1>
-    <hr class="border grow" />
+    <hr class="border grow min-w-1" />
 </div>

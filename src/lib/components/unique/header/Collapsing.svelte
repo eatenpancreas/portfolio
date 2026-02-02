@@ -17,7 +17,7 @@
 </script>
 
 {#if min_w_lg.current}
-    <div class={twMerge("flex gap-2 h-full items-center justify-center max-h-20", className)}>
+    <div class={twMerge("flex gap-4 h-full items-center justify-center max-h-20", className)}>
         {@render children?.()}
     </div>
 {:else}
@@ -28,7 +28,7 @@
             </DropdownMenu.Trigger>
 
             <DropdownMenu.Content class="pt-4">
-                <GlassDiv class="p-4! flex flex-col gap-4 bg-black">
+                <GlassDiv class="p-4! flex flex-col gap-2 bg-black">
                     {@render children?.()}
                 </GlassDiv>
             </DropdownMenu.Content>

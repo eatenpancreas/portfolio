@@ -13,9 +13,12 @@
     "header": {
         "switch_language": "Languages"
     },
+    "errors": {
+        "under_construction": "Under Construction!"
+    },
     "page": {
         "about_me": "About Me",
-        "music_taste": "Music",
+        "music_taste": "Music I listen to",
         "music_taste_tracks": "Top Tracks",
         "music_taste_albums": "Top Albums",
         "music_taste_artists": "Top Artists"

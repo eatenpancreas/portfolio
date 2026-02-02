@@ -1,7 +1,6 @@
 import type { ResolvedPathname } from "$app/types";
 import { get } from "svelte/store";
 import type { LocalizedPathname } from "./components/unique/header";
-import { m } from "./paraglide/messages";
 import { localizeHref, type Locale } from "./paraglide/runtime";
 import { localeStore } from "./store/layout";
 import { MediaQuery } from "svelte/reactivity";

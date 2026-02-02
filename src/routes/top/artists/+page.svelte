@@ -24,14 +24,6 @@
 
 <H1 title={m["page.music_taste_artists"]()}/>
 
-<Note>
-    <span class="font-bold">{m["note.pt0"]()}</span> {m["note.pt1"]()}
-    <p>
-        {m["note.pt2"]()}
-        <Link href="https://stats.fm/">stats.fm</Link>
-    </p>
-</Note>
-
 <stats.List list={statList} searchKeys={["artist.name"]}>
     {#snippet item(item)}
         {#if item.artist.image}

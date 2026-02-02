@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { Snippet } from "svelte";
-    import { ExternalLink } from "@lucide/svelte";
     import { twMerge } from "tailwind-merge";
     import { buttonStyle } from "$lib/style";
 
@@ -10,16 +9,15 @@
 {#if href.startsWith("https://")}
     <a
         {onclick}
-        class={twMerge(buttonStyle, "font-bold border-b text-center", className)}
+        class={twMerge(buttonStyle, className)}
         {href}
         target="_blank"
         rel="noopener noreferrer"
     >
         {@render children()}
-        <ExternalLink class="inline size-3"/>
     </a>
 {:else}
-    <a {onclick} class={twMerge(buttonStyle, "font-bold border-b text-center", className)} {href}>
+    <a {onclick} class={twMerge(buttonStyle, className)} {href}>
         {@render children()}
     </a>
 {/if}

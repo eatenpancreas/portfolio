@@ -3,6 +3,9 @@
     import type { Snippet } from "svelte";
     import Fuse from 'fuse.js';
     import { Search } from "@lucide/svelte";
+    import Note from "../Note.svelte";
+    import { m } from "$lib/paraglide/messages";
+    import Link from "$lib/components/basic/Link.svelte";
 
     let {
         list,
@@ -20,7 +23,15 @@
     let search = $state("");
 </script>
 
-<div class="relative max-w-120 mx-auto mt-8">
+<Note>
+    <span class="font-bold">{m["note.pt0"]()}</span> {m["note.pt1"]()}
+    <p>
+        {m["note.pt2"]()}
+        <Link href="https://stats.fm/">stats.fm</Link>
+    </p>
+</Note>
+
+<div class="relative max-w-full w-120 mx-auto mt-8">
     <GlassTextInput
         bind:value={search}
         placeholder="Search..."

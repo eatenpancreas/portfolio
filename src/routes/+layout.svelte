@@ -18,60 +18,69 @@
     <link rel="icon" href="/dachard-simple.svg" />
 </svelte:head>
 
-<header.Root>
-    <div>
-        <header.HomeImage src="/dachard.svg"/>
-    </div>
-    <header.Collapsing>
-        {#snippet collapsed()}
-            <Menu/>
-        {/snippet}
-
-        <header.Group>
-            <header.Item>
-                <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/')}>
-                    {m["page.about_me"]()}
-                </header.Link>
-            </header.Item>
-        </header.Group>
-        <header.Group heading={m["page.music_taste"]()}>
-            <header.LinkItems items={[
-          		{ href: localizeLink("/top/tracks"), text: m["page.music_taste_tracks"]() },
-          		{ href: localizeLink("/top/albums"), text: m["page.music_taste_albums"]() },
-          		{ href: localizeLink("/top/artists"), text: m["page.music_taste_artists"]() },
-            ]}/>
-        </header.Group>
-    </header.Collapsing>
-
-    <header.Collapsing class="justify-end pr-5">
-        {#snippet collapsed()}
-            <Settings/>
-        {/snippet}
-
-        <header.Group heading={m["header.switch_language"]()}>
-            {#each locales as locale}
-                <header.Item>
-                    <header.Link
-                        onclick={() => localeStore.set(locale)}
-                        href={localizeLink(page.url.pathname, locale)}
-                    >
-                        {m["language"]({}, { locale })}
-                    </header.Link>
-                </header.Item>
-            {/each}
-        </header.Group>
-    </header.Collapsing>
-</header.Root>
-
 <GlobalErrorDisplay />
 
 <div
 	class="fixed -right-4 inset-0 bg-repeat bg-size-[30rem] -z-10"
-	style="background-image: url(/pattern.jpg)"
+	style="background-image: url(/pattern.webp)"
 ></div>
 
-<main
-	class="p-2 sm:p-8 text-1xl text-white max-w-6xl mx-auto"
->
-	{@render children()}
-</main>
+<div class="h-screen flex flex-col min-w-60 pt-8">
+    <header.Root>
+        <div>
+            <header.HomeImage src="/dachard.svg"/>
+        </div>
+        <header.Collapsing>
+            {#snippet collapsed()}
+                <Menu class="cursor-pointer"/>
+            {/snippet}
+
+            <header.Group>
+                <header.Item>
+                    <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/')}>
+                        {m["page.about_me"]()}
+                    </header.Link>
+                </header.Item>
+            </header.Group>
+            <header.Group>
+                <header.Item>
+                    <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/projects')}>
+                        Projects
+                    </header.Link>
+                </header.Item>
+            </header.Group>
+            <header.Group heading={m["page.music_taste"]()}>
+                <header.LinkItems items={[
+              		{ href: localizeLink("/top/tracks"), text: m["page.music_taste_tracks"]() },
+              		{ href: localizeLink("/top/albums"), text: m["page.music_taste_albums"]() },
+              		{ href: localizeLink("/top/artists"), text: m["page.music_taste_artists"]() },
+                ]}/>
+            </header.Group>
+        </header.Collapsing>
+
+        <header.Collapsing class="justify-end pr-5">
+            {#snippet collapsed()}
+                <Settings class="cursor-pointer"/>
+            {/snippet}
+
+            <header.Group heading={m["header.switch_language"]()}>
+                {#each locales as locale}
+                    <header.Item>
+                        <header.Link
+                            onclick={() => localeStore.set(locale)}
+                            href={localizeLink(page.url.pathname, locale)}
+                        >
+                            {m["language"]({}, { locale })}
+                        </header.Link>
+                    </header.Item>
+                {/each}
+            </header.Group>
+        </header.Collapsing>
+    </header.Root>
+
+    <main
+    	class="p-2 sm:p-8 text-1xl text-white max-w-6xl mx-auto w-full grow flex flex-col h-full overflow-auto pt-26!"
+    >
+    	{@render children()}
+    </main>
+</div>
