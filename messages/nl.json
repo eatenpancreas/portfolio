@@ -13,11 +13,38 @@
     "header": {
         "switch_language": "Talen"
     },
+    "errors": {
+        "header": "Er is een fout opgetreden!",
+        "under_construction": "In Ontwikkeling!"
+    },
     "page": {
-        "about_me": "Over Mij",
-        "music_taste": "Muziek waar ik naar luister",
+        "about_me": "Over mij",
+        "projects": "Projecten",
+        "music_taste": "Wat ik luister",
         "music_taste_tracks": "Top Nummers",
         "music_taste_albums": "Top Albums",
         "music_taste_artists": "Top Artiesten"
+    },
+    "index": {
+        "hi": "Hi, ik ben Pascal, en ik studeer momenteel software development op",
+        "games": "Ik maak al games sinds mijn 14e, en heb websites en tools gebouwd als hobby en voor mijn werk. Ik heb ook een hoop andere nerdy hobby's.",
+        "saas_applications": "Terwijl ik bezig was met mijn studie, heb ik stages gelopen en ook contract werk verricht voor bedrijven, voornamelijk het bouwen van SaaS applicaties.",
+        "present_day": "Heden",
+        "tags": {
+            "internship": "Stage",
+            "hours": "{hours}u",
+            "treasurer": "Penningmeester",
+            "onsite": "Op locatie",
+            "remote": "Op afstand",
+            "acceleration_program": "Versneltraject"
+        },
+        "titles": {
+            "software_dev": "Software Development bij",
+            "previous_studies": "Eerdere studies",
+            "codehive": "Fullstack Developer bij",
+            "emmedy": "Stagiair met bouwen van mobiele applicaties bij",
+            "jitso_1": "Fullstack Developer met bouwen van SaaS applicaties bij",
+            "jitso_0": "Stagiair met bouwen van SaaS applicaties bij"
+        }
     }
 }

@@ -1,12 +1,9 @@
 <script lang="ts">
     import H1 from "$lib/components/basic/H1.svelte";
-    import { GlassDiv } from "$lib/components/glass";
     import { onMount } from "svelte";
     import statsapi from "$lib/client/stats";
     import { errorStore } from "$lib/store/layout";
     import type { TrackItem } from "$lib/client/stats/models";
-    import Note from "$lib/components/unique/Note.svelte";
-    import Link from "$lib/components/basic/Link.svelte";
     import stats from "$lib/components/unique/stats";
     import { m } from '$lib/paraglide/messages.js';
 

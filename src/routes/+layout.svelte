@@ -14,7 +14,7 @@
 
 
 <svelte:head>
-    <title>Pascal d'AvE{$pageStore? " - " + $pageStore : ""}</title>
+    <title>{$pageStore? "Pascal d'AvE - " + $pageStore : "Pascal d'Achard van Enschut"}</title>
     <link rel="icon" href="/dachard-simple.svg" />
 </svelte:head>
 
@@ -45,7 +45,7 @@
             <header.Group>
                 <header.Item>
                     <header.Link variant={min_w_lg.current ? "link" : "button"} href={localizeLink('/projects')}>
-                        Projects
+                        {m["page.projects"]()}
                     </header.Link>
                 </header.Item>
             </header.Group>

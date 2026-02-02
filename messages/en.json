@@ -14,13 +14,37 @@
         "switch_language": "Languages"
     },
     "errors": {
+        "header": "An error occurred!",
         "under_construction": "Under Construction!"
     },
     "page": {
-        "about_me": "About Me",
-        "music_taste": "Music I listen to",
+        "about_me": "About me",
+        "projects": "Projects",
+        "music_taste": "Listening to",
         "music_taste_tracks": "Top Tracks",
         "music_taste_albums": "Top Albums",
         "music_taste_artists": "Top Artists"
+    },
+    "index": {
+        "hi": "Hi, I'm Pascal, and I'm currently studying software development at",
+        "games": "I've been making games since I was 14, and have been building websites and tools both as a hobby and as my work. I do also have a bunch of other nerdy hobbies as well.",
+        "saas_applications": "While I've been working on my studies, I've also done some work and internships for companies on the side, mostly building SaaS applications.",
+        "present_day": "Present day",
+        "tags": {
+            "internship": "Internship",
+            "hours": "{hours}h",
+            "treasurer": "Treasurer",
+            "onsite": "On-site",
+            "remote": "Remote",
+            "acceleration_program": "Acceleration program"
+        },
+        "titles": {
+            "software_dev": "Software Development at",
+            "previous_studies": "Previous studies",
+            "codehive": "Fullstack Developer at",
+            "emmedy": "Intern building mobile applications at",
+            "jitso_1": "Fullstack Developer building SaaS applications at",
+            "jitso_0": "Intern building SaaS applications at"
+        }
     }
 }

@@ -3,16 +3,17 @@
     import { GlassDiv } from "$lib/components/glass";
     import { X } from "@lucide/svelte";
     import { slide } from "svelte/transition";
+    import { m } from "$lib/paraglide/messages";
 </script>
 
 {#if $errorStore}
     <div
-        class="fixed bottom-8 left-8 right-8"
+        class="fixed z-20 bottom-8 left-8 right-8"
         transition:slide={{ duration: 300 }}
     >
         <GlassDiv class=" bg-red-800/50 flex justify-between items-center">
             <div>
-                <p class="text-xl font-bold">An error occurred!</p>
+                <p class="text-xl font-bold">{m["errors.header"]()}</p>
                 <p class="text-red-200">{$errorStore}</p>
             </div>
             <button
