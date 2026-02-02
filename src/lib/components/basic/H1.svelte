@@ -12,9 +12,9 @@
     })
 </script>
 
-<div class="flex items-center text-2xl md:text-4xl lg:text-5xl py-4 gap-4">
+<div class="flex items-center text-2xl md:text-3xl lg:text-4xl py-4 gap-4">
     <hr class="border grow min-w-1" />
-    <h1 class="md:mb-4">
+    <h1 class="md:mb-4 max-w-[60vw]">
         {#if "title" in props}
             {props.title}
         {:else}

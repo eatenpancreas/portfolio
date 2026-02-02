@@ -8,6 +8,7 @@
     import { Menu, Settings } from '@lucide/svelte';
     import { m } from '$lib/paraglide/messages';
     import { localeStore, pageStore } from '$lib/store/layout';
+    import { glassDivClasses } from '$lib/components/glass';
 
 	let { children } = $props();
 </script>
@@ -82,5 +83,10 @@
     	class="p-2 sm:p-8 text-1xl text-white max-w-6xl mx-auto w-full grow flex flex-col h-full overflow-auto pt-26!"
     >
     	{@render children()}
+        <footer class="{glassDivClasses} mt-20 py-20! flex items-center justify-center flex-col">
+            <div>©2026 - Pascal d'Achard van Enschut</div>
+            <div>All rights reserved.</div>
+            <div class="mt-10">Background pattern by Prawny via Pixabay</div>
+        </footer>
     </main>
 </div>
