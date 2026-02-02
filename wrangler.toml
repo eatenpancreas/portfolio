@@ -2,3 +2,9 @@ name = "portfolio"
 pages_build_output_dir = ".svelte-kit/cloudflare"
 compatibility_flags = ["nodejs_compat"]
 compatibility_date = "2026-02-02"
+
+[build]
+command = "bun run build"
+
+[build.environment]
+UNSTABLE_PRE_BUILD = "asdf install bun latest && asdf global bun latest && bun install"
