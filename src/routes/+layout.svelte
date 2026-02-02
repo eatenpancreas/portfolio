@@ -26,7 +26,7 @@
 	style="background-image: url(/pattern.webp)"
 ></div>
 
-<div class="h-screen flex flex-col min-w-60 pt-8">
+<div class="h-[100dvh] flex flex-col min-w-60 pt-8">
     <header.Root>
         <div>
             <header.HomeImage src="/dachard.svg"/>
